@@ -1,0 +1,163 @@
+@use "./mixins" as *;
+
+.btn {
+  scroll-behavior: smooth;
+  display: block;
+  position: relative;
+  width: max-content;
+  background: var(--btn-color);
+  cursor: pointer;
+}
+
+.btn.button:not(.nav, .footer) {
+  white-space: nowrap;
+  display: block;
+  height: max-content;
+  padding: 9px 20px 6px;
+  font-family: var(--font-display);
+  font-size: 30px;
+  text-align: center;
+  border-radius: 10px;
+  background-color: var(--c-orange);
+  color: var(--c-white);
+  border: 2px solid var(--c-orange);
+  transition:
+    background-color 150ms ease-in-out,
+    color 150ms ease-in-out;
+
+  @media (pointer: fine) and (hover) {
+    &:hover,
+    &:focus {
+      color: var(--c-orange);
+      text-decoration: none;
+      background-color: var(--c-gray-dark);
+    }
+  }
+
+  @include breakpoint("tablet") {
+    width: 100%;
+  }
+  @media (pointer: fine) and (hover) {
+    &:hover,
+    &:focus {
+      color: var(--c-orange);
+      text-decoration: none;
+      background-color: var(--c-gray-dark);
+    }
+  }
+
+  &.teal {
+    background-color: var(--c-teal);
+    border-color: var(--c-teal);
+    @media (pointer: fine) and (hover) {
+      &:hover,
+      &:focus {
+        color: var(--c-white);
+        background-color: var(--c-gray-dark);
+      }
+    }
+  }
+
+  &.outline {
+    border: 2px solid var(--c-orange);
+    color: var(--c-orange);
+    background-color: transparent;
+    @media (pointer: fine) and (hover) {
+      &:hover,
+      &:focus {
+        color: var(--c-white);
+        background-color: var(--c-orange);
+      }
+    }
+    &.teal {
+      border-color: var(--c-teal);
+      color: var(--c-teal);
+      @media (pointer: fine) and (hover) {
+        &:hover,
+        &:focus {
+          color: var(--c-white); // Change to white on hover
+          background-color: var(--c-teal);
+        }
+      }
+    }
+  }
+}
+
+.nav {
+  font-weight: 400;
+  font-family: var(--font-display);
+  padding: 20px 10px;
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+  color: var(--c-tan-light);
+
+  ::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 0;
+    background: var(--c-blue-400);
+    transition: height 150ms ease-in-out;
+
+    @include breakpoint("tablet") {
+      background: var(--c-gray-dark);
+    }
+  }
+  &.primary {
+    padding-left: 20px;
+    position: relative;
+    &:before {
+      content: "";
+      position: absolute;
+      height: 22px;
+      width: 1px;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      background: var(--c-orange);
+    }
+    @include breakpoint("tablet") {
+      // padding-left: 10px;
+      &:before {
+        display: none;
+      }
+    }
+  }
+
+  @media (pointer: fine) and (hover) {
+    &:hover,
+    &:focus {
+      outline: none;
+      color: var(--c-orange);
+      text-decoration: none;
+      ::after {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background: linear-gradient(180deg, var(--c-blue-400), var(--c-blue-600));
+        @include breakpoint("tablet") {
+          background: var(--c-blue-600);
+        }
+      }
+    }
+  }
+
+  @include breakpoint(tablet) {
+    font-size: 1.5rem;
+    width: 100%;
+    color: var(--c-white);
+    background: var(--c-gray-dark);
+    padding: 16px 0px;
+    &.primary {
+      padding-left: 0;
+    }
+  }
+}

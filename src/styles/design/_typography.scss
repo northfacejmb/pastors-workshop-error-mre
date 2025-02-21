@@ -1,0 +1,84 @@
+@use "./mixins" as *;
+
+body {
+  --font-display: "Bebas", sans-serif;
+  --font-body: "OpenSansCondensed", sans-serif;
+}
+i {
+  font-variation-settings: "slnt" -10;
+}
+
+.title-lg {
+  font: {
+    family: "Bebas", sans-serif;
+    size: 80px;
+    weight: normal;
+  }
+  line-height: 1;
+  letter-spacing: 1px;
+
+  @include breakpoint("tablet") {
+    font-size: 65px;
+  }
+
+  // @include breakpoint(tablet) {
+  //   font-size: clamp(80px, calc(3rem + ((1vw - 6px) * 4)), 60px);
+  // }
+
+  // @media screen and (min-width: 1500px) {
+  //   font-size: clamp(80px, (9.5238vw - 5.1786rem), 100px);
+  // }
+  // a {
+  //   @extend .brand-link;
+  // }
+}
+.title-md {
+  font: {
+    family: "Bebas", sans-serif;
+    size: 30px;
+    weight: normal;
+  }
+  line-height: 1;
+
+  @include breakpoint("tablet") {
+    font-size: 28px;
+  }
+}
+.title-sm {
+  font: {
+    family: "Bebas", sans-serif;
+    size: 16px;
+    weight: normal;
+  }
+  line-height: 1;
+  letter-spacing: 1px;
+}
+.text-label {
+  font: {
+    family: "Bebas", sans-serif;
+    size: 16px;
+    weight: normal;
+  }
+  line-height: 1;
+  // @media screen and (min-width: 1500px) {
+  //   font-size: clamp(26px, 0.8438rem + 2.5vw, 36px);
+  // }
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.darkBackgroundStyles a {
+  --link-color: var(--c-white);
+  --link-secondary: var(--c-black);
+}
+
+.paragraph {
+  font-family: var(--font-body);
+  font-size: 18px;
+}
+
+.quote-mark {
+  color: var(--c-orange);
+}

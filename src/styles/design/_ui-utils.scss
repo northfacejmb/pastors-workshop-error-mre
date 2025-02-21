@@ -1,0 +1,96 @@
+@use "./mixins" as *;
+
+.max-width {
+  position: relative;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  min-width: 0;
+}
+
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.disable {
+  user-select: none;
+  pointer-events: none;
+}
+
+.pin {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.box-image {
+  width: 100%;
+  // margin: 0 auto;
+  border-radius: 20px;
+  border-collapse: separate;
+  border-spacing: 0;
+  object-fit: cover;
+}
+
+.hide {
+  display: none !important;
+}
+
+.hide-wide {
+  @include breakpoint(wide) {
+    display: none !important;
+  }
+}
+
+.hide-desktop {
+  @include breakpoint(desktop) {
+    display: none !important;
+  }
+}
+
+.hide-tablet {
+  @include breakpoint(tablet) {
+    display: none !important;
+  }
+}
+
+.hide-phone {
+  @include breakpoint(phone) {
+    display: none !important;
+  }
+}
+
+.show-wide {
+  display: none !important;
+  @include breakpoint(wide) {
+    display: inherit !important;
+  }
+}
+
+.show-desktop {
+  display: none !important;
+  @include breakpoint(desktop) {
+    display: inherit !important;
+  }
+}
+
+.show-tablet {
+  display: none !important;
+  @include breakpoint(tablet) {
+    display: inherit !important;
+  }
+}
+
+.show-phone {
+  display: none !important;
+  @include breakpoint(phone) {
+    display: inherit !important;
+  }
+}
+
+.off-screen {
+  position: absolute;
+  left: -4999px;
+}

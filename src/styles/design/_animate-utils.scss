@@ -1,0 +1,64 @@
+:root {
+	--animation-easing: ease-in-out;
+	--animation-delay: 350ms;
+	--animation-duration: 600ms;
+}
+.animate-slide-right {
+	opacity: 0;
+	transform: translateX(-100px);
+	transition: opacity var(--animation-duration) ease-out,
+		transform var(--animation-duration) ease-in-out;
+	transition-delay: 300ms;
+}
+.animate-rule-wipe {
+	opacity: 0;
+	transform-origin: left;
+	transform: scaleX(1%);
+	transition: opacity 50ms ease-out, transform 1.5s ease-in-out;
+}
+.animate-slide-left {
+	opacity: 0;
+	transform: translateX(100px);
+	transition: opacity var(--animation-duration) ease-out,
+		transform var(--animation-duration) ease-in-out;
+	transition-delay: 300ms;
+}
+.animate-slide-up {
+	opacity: 0;
+	transform: translateY(100px);
+	transition: opacity var(--animation-duration) ease-out,
+		transform var(--animation-duration) ease-in-out;
+	transition-delay: 300ms;
+}
+.animate-stagger-up {
+	opacity: 0;
+	transform: translateY(100px);
+	transition: opacity 400ms ease-out, transform 400ms var(--animation-easing);
+	transition-delay: calc(var(--animation-order) * 200ms);
+}
+
+.animate-rules {
+	.rule-image {
+		opacity: 0;
+		transform-origin: left;
+		transform: translateX(-600px);
+		transition: opacity 600ms ease-in-out, transform 600ms ease-in-out;
+		transition-delay: calc((var(--animation-order)) * 200ms);
+	}
+	&.reverse .rule-image {
+		transform: translateX(600px);
+	}
+}
+
+.animate-scale {
+	opacity: 0;
+	transform: scale(0.3);
+	transition: opacity 300ms ease-out, transform 300ms var(--animation-easing);
+	transition-delay: calc(var(--animation-order) * 200ms);
+}
+.inview,
+.inview .rule-image,
+.inview.reverse .rule-image {
+	opacity: 1;
+	transform: translateX(0) translateY(0) scale(1);
+}

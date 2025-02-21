@@ -1,0 +1,253 @@
+{
+    "created_at": 1721053326,
+    "default_sorting_field": "first_published_at_int64",
+    "enable_nested_fields": true,
+    "fields": [
+        {
+            "facet": false,
+            "index": true,
+            "infix": false,
+            "locale": "",
+            "name": "content.content_plain",
+            "optional": true,
+            "sort": false,
+            "stem": false,
+            "type": "string"
+        },
+        {
+            "facet": true,
+            "index": true,
+            "infix": false,
+            "locale": "",
+            "name": "content.top_level_categories.name",
+            "optional": true,
+            "sort": false,
+            "stem": false,
+            "type": "string[]"
+        },
+        {
+            "facet": true,
+            "index": true,
+            "infix": false,
+            "locale": "",
+            "name": "content.illustration_categories.name",
+            "optional": true,
+            "sort": false,
+            "stem": false,
+            "type": "string[]"
+        },
+        {
+            "facet": true,
+            "index": true,
+            "infix": false,
+            "locale": "",
+            "name": "content.keywords.name",
+            "optional": true,
+            "sort": false,
+            "stem": false,
+            "type": "string[]"
+        },
+        {
+            "facet": false,
+            "index": true,
+            "infix": false,
+            "locale": "",
+            "name": "name",
+            "optional": true,
+            "sort": false,
+            "stem": false,
+            "type": "string"
+        },
+        {
+            "facet": true,
+            "index": true,
+            "infix": false,
+            "locale": "",
+            "name": "content.liturgy_categories.name",
+            "optional": true,
+            "sort": false,
+            "stem": false,
+            "type": "string[]"
+        },
+        {
+            "facet": true,
+            "index": true,
+            "infix": false,
+            "locale": "",
+            "name": "content.component",
+            "optional": false,
+            "sort": false,
+            "stem": false,
+            "type": "string"
+        },
+        {
+            "facet": true,
+            "index": true,
+            "infix": false,
+            "locale": "",
+            "name": "year_added",
+            "optional": true,
+            "sort": true,
+            "stem": false,
+            "type": "int64"
+        },
+        {
+            "facet": true,
+            "index": true,
+            "infix": false,
+            "locale": "",
+            "name": "first_published_at_int64",
+            "optional": false,
+            "sort": true,
+            "stem": false,
+            "type": "int64"
+        },
+        {
+            "facet": true,
+            "index": true,
+            "infix": false,
+            "locale": "",
+            "name": "content.bible_references.bibleRefBookChapter",
+            "optional": true,
+            "sort": false,
+            "stem": false,
+            "type": "string[]"
+        },
+        {
+            "facet": true,
+            "index": true,
+            "infix": false,
+            "locale": "",
+            "name": "content.lectionary_season",
+            "optional": true,
+            "sort": false,
+            "stem": false,
+            "type": "string"
+        },
+        {
+            "facet": true,
+            "index": true,
+            "infix": false,
+            "locale": "",
+            "name": "content.lectionary_day",
+            "optional": true,
+            "sort": false,
+            "stem": false,
+            "type": "string"
+        },
+        {
+            "facet": true,
+            "index": true,
+            "infix": false,
+            "locale": "",
+            "name": "content.lectionary_cycle",
+            "optional": true,
+            "sort": false,
+            "stem": false,
+            "type": "string"
+        },
+        {
+            "facet": true,
+            "index": true,
+            "infix": false,
+            "locale": "",
+            "name": "content.lectionary_year",
+            "optional": true,
+            "sort": false,
+            "stem": false,
+            "type": "string"
+        },
+        {
+            "facet": true,
+            "index": true,
+            "infix": false,
+            "locale": "",
+            "name": "content.bible_references.bibleRefBookChapterVerses",
+            "optional": true,
+            "sort": false,
+            "stem": false,
+            "type": "string[]"
+        },
+        {
+            "facet": false,
+            "index": true,
+            "infix": false,
+            "locale": "",
+            "name": "full_slug",
+            "optional": true,
+            "sort": false,
+            "stem": false,
+            "type": "string"
+        },
+        {
+            "facet": true,
+            "index": true,
+            "infix": false,
+            "locale": "",
+            "name": "content.bible_references.bibleRefPlain",
+            "optional": true,
+            "sort": false,
+            "stem": false,
+            "type": "string[]"
+        },
+        {
+            "facet": true,
+            "index": true,
+            "infix": false,
+            "locale": "",
+            "name": "content.author.name",
+            "optional": true,
+            "sort": false,
+            "stem": false,
+            "type": "string[]"
+        },
+        {
+            "facet": true,
+            "index": true,
+            "infix": false,
+            "locale": "",
+            "name": "content.bible_references.bibleRefBook",
+            "optional": true,
+            "sort": false,
+            "stem": false,
+            "type": "string[]"
+        },
+        {
+            "facet": true,
+            "index": true,
+            "infix": false,
+            "locale": "",
+            "name": "content.bible_references.bibleRefBookChapterVerses",
+            "optional": true,
+            "sort": false,
+            "stem": false,
+            "type": "string[]"
+        },
+        {
+            "facet": true,
+            "index": true,
+            "infix": false,
+            "locale": "",
+            "name": "content.bible_references.bibleRefBookChapter",
+            "optional": true,
+            "sort": false,
+            "stem": false,
+            "type": "string[]"
+        },
+        {
+            "facet": false,
+            "index": true,
+            "infix": false,
+            "locale": "",
+            "name": "content.bible_references.hasBibleRef",
+            "optional": true,
+            "sort": false,
+            "stem": false,
+            "type": "bool[]"
+        }
+    ],
+    "name": "stories_v4",
+    "num_documents": 15083,
+    "symbols_to_index": [],
+    "token_separators": []
+}

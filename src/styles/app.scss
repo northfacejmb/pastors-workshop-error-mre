@@ -1,0 +1,204 @@
+@use "./base/reset";
+@use "./base/fonts";
+@use "./base/colors";
+@use "./design/ui-utils";
+@use "./design/typography";
+@use "./design/animate-utils";
+@use "./design/rich-text";
+@use "./design/search";
+@use "./design/buttons";
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--c-gray-dark);
+}
+body {
+  overflow-y: scroll;
+  overscroll-behavior: none;
+  font-family: "OpenSansCondensed", sans-serif;
+  background-color: var(--c-gray-dark);
+  font-size: 19px;
+  // &::selection {
+  //   background-color: var(--c-yellow);
+  //   color: var(--c-black);
+  // }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Bebas", sans-serif;
+  line-height: 1;
+  font-weight: normal;
+  // letter-spacing: 1px;
+}
+
+#application {
+}
+
+.application-wrapper {
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+  background-color: var(--c-cream);
+  margin: 0 auto;
+}
+
+a {
+  color: var(--c-orange);
+  transition: all 100ms ease-out;
+  cursor: pointer;
+
+  &:hover,
+  &:active {
+    color: var(--c-black);
+    text-decoration: underline;
+  }
+}
+
+input {
+  border-radius: 10px;
+  border: 1px solid #fff;
+  padding: 9px 18px;
+
+  &:active,
+  &:focus,
+  &:focus-visible {
+    border-color: var(--c-orange);
+    outline: none;
+  }
+}
+
+pre {
+  font-size: 10px;
+}
+
+// Scrollbar
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--c-black);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--c-orange);
+  border-radius: 10px;
+}
+
+body {
+  scrollbar-width: thin;
+  scrollbar-color: var(--c-orange) var(--c-black);
+}
+
+.links-list {
+  display: flex;
+  flex-direction: column;
+  margin: 5px 0 0 0;
+}
+.sidebar-link {
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 2px 0;
+  font-size: 20px;
+  text-overflow: ellipsis;
+
+  &.active {
+    pointer-events: none;
+    color: var(--c-gray-light);
+  }
+
+  &::before {
+    content: "- ";
+    display: inline-block;
+    padding: 0 4px 0 0;
+    color: var(--c-tan-dark);
+  }
+}
+
+.lectionary-sidebar {
+  .rich-text {
+    a {
+      font-family: var(--font-body);
+      font-size: 18px;
+      line-height: auto;
+      color: var(--c-orange);
+      &:hover {
+        color: var(--c-black);
+      }
+    }
+  }
+}
+
+.filter-controls {
+  margin: 20px 0 0 0;
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .applied-filter-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  .filter-item {
+    position: relative;
+
+    button {
+      cursor: pointer;
+      text-align: left;
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-transform: capitalize;
+      background-color: var(--c-white);
+      color: var(--c-black);
+      border-radius: 3px;
+      padding: 4px 8px;
+      &:hover,
+      &:focus {
+        .x {
+          transform: scale(1);
+        }
+      }
+    }
+    .type {
+      color: var(--c-orange);
+      font-size: 12px;
+      line-height: 14px;
+    }
+    .label {
+      font-size: 15px;
+      line-height: 17px;
+    }
+    .x {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      right: -5px;
+      top: -5px;
+      background-color: var(--c-orange);
+      width: 20px;
+      height: 20px;
+      border-radius: 2px;
+      transform: scale(0);
+      transition: 150ms ease;
+      svg {
+        width: 10px;
+      }
+    }
+  }
+
+  .title-md {
+    font-size: 22px;
+  }
+}

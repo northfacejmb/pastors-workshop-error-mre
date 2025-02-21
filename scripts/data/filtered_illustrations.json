@@ -1,0 +1,80 @@
+[
+  {
+    "name": "As a pastor, I’ve had people come to me",
+    "full_slug": "quotes/timothy-keller-as-a-pastor-ive-had-people-come-to-me-id_9393",
+    "illustrations_link": "http://www.preachingtoday.com/illustrations/2011/march/6030711.html",
+    "illustrations_field": "content.citations[0].link.url"
+  },
+  {
+    "name": "God created the world to be a fabric,",
+    "full_slug": "quotes/timothy-keller-god-created-the-world-to-be-a-fabric-id_7537",
+    "illustrations_link": "http://www.preachingtoday.com/illustrations/2010/november/7111510.html",
+    "illustrations_field": "content.citations[0].link.url"
+  },
+  {
+    "name": "Fourth Sunday in Lent",
+    "full_slug": "lectionary/year-c/2024-2025/fourth-sunday-in-lent-2-corinthians-5-16-21",
+    "illustrations_link": "/illustrations/stuart-r-strachan-jr-solving-the-worlds-problems-id_371",
+    "illustrations_field": "content.commentary_content.content[30].content[1].marks[0].attrs.href"
+  },
+  {
+    "name": "Baptism of the Lord",
+    "full_slug": "lectionary/year-c/2024-2025/baptism-of-the-lord-isaiah-43-1-7",
+    "illustrations_link": "/illustrations/sandra-l-richter-redemption-in-ancient-israel-id_3656",
+    "illustrations_field": "content.commentary_content.content[15].content[0].content[1].marks[0].attrs.href"
+  },
+  {
+    "name": "Fourth Sunday of Advent",
+    "full_slug": "lectionary/year-c/2024-2025/fourth-sunday-of-advent-hebrews-10-5-10",
+    "illustrations_link": "/illustrations/the-cave",
+    "illustrations_field": "content.commentary_content.content[19].content[3].marks[0].attrs.href"
+  },
+  {
+    "name": "First Sunday of Advent",
+    "full_slug": "lectionary/year-c/2024-2025/first-sunday-of-advent-1-thessalonians-3-9-13",
+    "illustrations_link": "/illustrations/michael-frost-the-threat-of-the-christians-id_282",
+    "illustrations_field": "content.commentary_content.content[12].content[3].marks[0].attrs.href"
+  },
+  {
+    "name": "Waiting is Not Wasting Time: Advent 2024",
+    "full_slug": "blog/waiting-is-not-wasting-time",
+    "illustrations_link": "/illustrations/annie-f-downs-strange-advice-from-a-counselor-id_2310",
+    "illustrations_field": "content.content.content[37].attrs.body[0].content.content[4].content[1].marks[0].attrs.href"
+  },
+  {
+    "name": "Scripture Guide, Isaiah 43:1-7",
+    "full_slug": "scripture-guide/isaiah-43-1-7",
+    "illustrations_link": "/illustrations/sandra-l-richter-redemption-in-ancient-israel-id_3656",
+    "illustrations_field": "content.content.content[15].content[0].content[1].marks[0].attrs.href"
+  },
+  {
+    "name": "Pastoral Success: Beyond the Business Model",
+    "full_slug": "blog/pastoral-success-beyond-the-business-model",
+    "illustrations_link": "/illustrations/anthony-campolo-the-shining-city-id_1882",
+    "illustrations_field": "content.content.content[15].content[1].marks[0].attrs.href"
+  },
+  {
+    "name": "Sample Content",
+    "full_slug": "sale/sample-content",
+    "illustrations_link": "/illustrations/the-other-side-of-the-river",
+    "illustrations_field": "content.body[1].content_blocks[0].content.content[0].content[0].content[0].content[0].marks[0].attrs.href"
+  },
+  {
+    "name": "Sinner and Saints",
+    "full_slug": "sermon-illustrations/sinner-and-saints",
+    "illustrations_link": "/illustrations/john-blanchard-what-is-wrong-with-the-world-today-id_1654",
+    "illustrations_field": "content.content.content[2].content[2].marks[0].attrs.href"
+  },
+  {
+    "name": "Scripture Guide, Genesis 12:1-9",
+    "full_slug": "scripture-guide/genesis-121-9",
+    "illustrations_link": "/illustrations/jonathan-grant-how-to-get-to-dublin-id_3855",
+    "illustrations_field": "content.content.content[29].content[0].marks[0].attrs.href"
+  },
+  {
+    "name": "A Modern Ash Wednesday Service",
+    "full_slug": "blog/a-modern-ash-wednesday-service",
+    "illustrations_link": "/illustrations/beth-bevis-the-roots-of-ash-wednesday-id_3318",
+    "illustrations_field": "content.content.content[4].content[3].marks[0].attrs.href"
+  }
+]

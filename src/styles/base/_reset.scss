@@ -1,0 +1,109 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+}
+
+img,
+picture,
+video,
+canvas {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: inherit;
+  color: inherit;
+
+  :visited {
+    color: inherit;
+    text-decoration: inherit;
+  }
+}
+
+footer .site-info a {
+  white-space: nowrap;
+  --link-color: #fff;
+  --link-secondary: #051c2c;
+  padding: 2px;
+  position: relative;
+  text-decoration: none;
+  z-index: 1;
+  &::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    bottom: 0px;
+    left: -1px;
+    width: calc(100% + 2px);
+    height: 1px;
+    color: var(--link-color);
+    background-color: var(--link-color);
+    transition: height 0.15s ease-in-out;
+  }
+  &:hover,
+  &:focus {
+    color: var(--link-secondary);
+    text-decoration: none;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0px;
+
+      height: 100%;
+    }
+  }
+}
+
+pre {
+}
+
+button {
+  background: none;
+  border: 0;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
