@@ -17,21 +17,16 @@
 	{/if}
 	<!-- <link rel="manifest" href="/manifest.webmanifest" /> -->
 </svelte:head>
-{#if $page.url.pathname === '/config'}
-	<slot />
-{:else}
 	<div class="application-wrapper">
 		
 		<Header header={$config} authenticated={true} />
-		{#key $page.url.pathname}
 			<div class="layout-wrapper">
 				<slot />
 			</div>
-		{/key}
 		
 		<Footer footer={$config} />
 	</div>
-{/if}
+
 
 <style lang="scss">
 	.application-wrapper {

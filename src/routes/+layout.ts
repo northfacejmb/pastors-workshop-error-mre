@@ -16,7 +16,7 @@ import Testimonials from '$components/cms-modules/testimonials.svelte';
 import TextSidebar from '$components/cms-modules/text-sidebar.svelte';
 import UpcomingLectionary from '$components/cms-modules/upcoming-lectionary.svelte';
 import Button from '$components/reusable-components/button.svelte';
-import { PUBLIC_STORYBLOK_ENV, PUBLIC_STORYBLOK_TOKEN, PUBLIC_TYPESENSE_HOST, PUBLIC_TYPESENSE_PORT, PUBLIC_TYPESENSE_PROTOCOL, PUBLIC_TYPESENSE_SEARCH_ONLY_API_KEY } from '$env/static/public';
+import { PUBLIC_STORYBLOK_ENV, PUBLIC_STORYBLOK_TOKEN,  } from '$env/static/public';
 import { config } from '$src/stores/config.store.js';
 import { portalUrl } from '$src/stores/portalUrl.store.js';
 import { hydrated } from '$src/utils/lifecycles.js';
@@ -41,7 +41,7 @@ export async function load({ data, url, fetch }) {
     console.log('Layout.ts Hydrated');
   }
 
-  const { pathname } = url;
+  const { pathname } = "url";
 
   storyblokInit({
     accessToken: PUBLIC_STORYBLOK_TOKEN,
@@ -84,48 +84,8 @@ export async function load({ data, url, fetch }) {
     return dataConfig.data.story.content;
   });
 
-  let portalUrlValue;
-
-  
-  if(browser){
-    try {
-      const response = await fetch('/api/account?/portal', {
-        method: 'POST',
-        body: ''
-      });
-      const data = await response.json();
-      const url = JSON.parse(data.data)[0];
-      portalUrlValue = url;
-      // console.log("portalUrlValue", portalUrlValue)
-    } catch (error) {
-      console.error('Error:', error);
-    }
-    portalUrl.update(() => {
-      return portalUrlValue
-    })
-}
-
-  const typesense = new Typesense.Client({
-    apiKey: PUBLIC_TYPESENSE_SEARCH_ONLY_API_KEY || "",
-    nodes: [{
-      host: PUBLIC_TYPESENSE_HOST || "",
-      port: parseInt(PUBLIC_TYPESENSE_PORT || '443'),
-      protocol: PUBLIC_TYPESENSE_PROTOCOL || 'https',
-    }],
-    connectionTimeoutSeconds: 5
-  });
-
-  // console.log(url.pathname, data.authenticated);
-
-  // if (url.pathname.length === 1 && data.authenticated) {
-  //   return {
-  //     status: 302,
-  //     redirect: '/account',
-  //   };
-  // }
 
   return {
-    typesense,
     storyblokApi,
     pathname,
 
