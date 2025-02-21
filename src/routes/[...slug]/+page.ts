@@ -1,5 +1,6 @@
 // src/routes/[...slug]/+page.ts
 import relations from '$src/utils/relations';
+import { PUBLIC_STORYBLOK_ENV,  } from '$env/static/public';
 import { error } from '@sveltejs/kit';
 import type { PageLoad } from './$types';
 export const load: PageLoad = async ({ parent }) => {
@@ -8,7 +9,7 @@ export const load: PageLoad = async ({ parent }) => {
   let sbRes: any;
   try {
       sbRes = await storyblokApi.get("cdn/stories/lectionary/year-c/2024-2025/maundy-thursday-psalm-116-1-2-12-19", {
-      version:  "draft", 
+      version:  PUBLIC_STORYBLOK_ENV, 
       resolve_relations: relations,
     }  );
 
