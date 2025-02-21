@@ -1,12 +1,9 @@
 <script lang="ts">
 	import Footer from '$components/cms-global/footer.svelte';
 	import Header from '$components/cms-global/header.svelte';
-	import Form from '$components/cms-modules/form.svelte';
 	import { config } from '$src/stores/config.store.ts';
 	import '$src/styles/app.scss';
 
-	import { page } from '$app/stores';
-	
 </script>
 
 <svelte:head>
