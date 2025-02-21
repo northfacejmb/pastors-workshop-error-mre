@@ -1,28 +1,21 @@
 import LectionarySingle from '$components/cms-contentTypes/lectionary-single.svelte';
 import ChildIndex from '$components/cms-modules/child-index.svelte';
-import Circles from '$components/cms-modules/circles.svelte';
 import ContentList from '$components/cms-modules/content-list.svelte';
 import Content from '$components/cms-modules/content.svelte';
 import Embed from '$components/cms-modules/embed.svelte';
 import Form from '$components/cms-modules/form.svelte';
 import HeroInterior from '$components/cms-modules/hero-interior.svelte';
 import Hero from '$components/cms-modules/hero.svelte';
-import LectionaryIndex from '$components/cms-modules/lectionary-index.svelte';
-import RamdomContent from '$components/cms-modules/random-content.svelte';
-import ScriptureGuide from '$components/cms-modules/scripture-guide-index.svelte';
+
 import Search from '$components/cms-modules/search.svelte';
-import PricingTable from '$components/cms-modules/stripe-pricing-table.svelte';
-import Testimonials from '$components/cms-modules/testimonials.svelte';
+
 import TextSidebar from '$components/cms-modules/text-sidebar.svelte';
-import UpcomingLectionary from '$components/cms-modules/upcoming-lectionary.svelte';
 import Button from '$components/reusable-components/button.svelte';
 import { PUBLIC_STORYBLOK_ENV, PUBLIC_STORYBLOK_TOKEN,  } from '$env/static/public';
 import { config } from '$src/stores/config.store.js';
-import { portalUrl } from '$src/stores/portalUrl.store.js';
 import { hydrated } from '$src/utils/lifecycles.js';
 import cloneDeep from "clone-deep";
-import Typesense from 'typesense';
-import { browser } from '$app/environment';
+
 
 const mySchema = cloneDeep(RichTextSchema);
 
